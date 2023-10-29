@@ -1,0 +1,168 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{tasks}
+\usepackage[T1]{fontenc}
+\usepackage{tgbonum}
+\usepackage{array}
+
+% Page setup
+\geometry{top=1in, bottom=1in, left=1in, right=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Brick Braker Game }
+\lhead{Nandini Patel (0801CS221095)}
+\rfoot{
+\begin{center}
+\thepage
+\end{center}}
+
+\renewcommand{\headrulewidth}{2pt}
+\author{Nandini Patel}
+\date{ 30 October 2023}
+
+\begin{document}
+
+\begin{center}
+\includegraphics[width = 4cm]{logo.png}
+\textbf{}\\ \textbf{}\\ \textbf{}\\
+\textbf{\huge Shri G.S. Institute of Technology and Science}\\ 
+\textbf{}\\
+\textbf{\huge INDORE}
+\textbf{}\\ \textbf{}\\ \textbf{}\\ \textbf{}\\ \textbf{}\\ \textbf{}\\ \textbf{}\\ \textbf{}\\ \textbf{}\\ \textbf{}\\
+\textbf{\huge \fontfamily{phv}\selectfont Brick Braker Game}\\
+\textbf{}\\
+\textbf{\huge \fontfamily{phv}\selectfont  Mini Project}
+\end{center}
+\textbf{}\\ \textbf{}\\ \textbf{}\\
+\LARGE \fontfamily{phv}\selectfont Submitted by:Nandini Patel
+\textbf{}\\ \textbf{}\\
+\LARGE \fontfamily{phv}\selectfont Enrollment no: 0801CS221095
+\pagebreak{}
+
+
+\begin{center}
+\huge \underline{INTRODUCTION}
+\end{center}
+\\
+\LARGE \fontfamily{cmss}\selectfont 1. Brick Breaker is a classic arcade game that has entertained players for decades. It's also known by other names like Breakout or Arkanoid in various versions. In Brick Breaker, the player controls a paddle or platform at the bottom of the screen, and their goal is to break a wall of bricks located at the top of the screen using a ball. The game is known for its simple yet addictive gameplay and has been a staple of the gaming world since the late 1970s. \\
+\textbf{}\\
+\LARGE \fontfamily{cmss}\selectfont 2. Brick Breaker is a timeless and enjoyable game that challenges players' reflexes and hand-eye coordination. Its simplicity and addictive nature have made it a popular choice for both casual and serious gamers. Over the years, many variations and adaptations of the game have been developed, each adding unique twists and features while staying true to the core gameplay concept.\\
+\\
+\LARGE{\textbf{Introduction to how Brick Braker is typically played :}}
+\begin{enumerate}
+    \item [\bullet] \textbf{Objective :} The main objective of Brick Breaker is to clear all the bricks from the screen.
+    \item[\bullet] \textbf{Paddle Control: } Players control a paddle that moves horizontally along the bottom of the screen. The paddle is used to bounce the ball back up towards the bricks.
+    \item [\bullet] \textbf{Ball and Bricks:}  A ball is launched from the paddle, and it bounces off the walls and bricks. When the ball hits a brick, the brick disappears.
+    \item [\bullet] \textbf{Game Over :}The game is typically over if the ball falls below the paddle and off the screen. 
+    \item[\bullet] \textbf{Scoring: } Players earn points for breaking bricks. 
+\end{enumerate}
+\pagebreak{}
+\begin{center}
+    \LARGE \underline{\textbf{PROJECT OVERVIEW }}    
+\end{center}
+\begin{enumerate}
+    \item \textbf{Language used: } Java
+    \item \textbf{Libraries used: }
+    \begin{enumerate}
+        \item For GUI Framework - Swing and AWT(Abstract window toolkit)
+        \item  For Events  -  awt.Event\\
+    \end{enumerate}
+    \item \textbf{Classes: }
+    \begin{enumerate}
+        \item [\bullet] \textbf{Jframe : } It provides a window in which you can add various GUI components and controls.The methods of Jframe class :
+        \begin{enumerate}
+        \item[1]\ setBounds(): It is used to set the position and 
+           dimensions of a JFrame. location (x, y) and size (width, height) of the frame 
+        \item[2]\ setTitle() :  Sets the title of the frame.
+        \item[3]\ setResizable(): Determines whether the frame can be 
+          resized by the user.
+        \item[4]\ setVisible(): Sets the visibility of the frame. Setting it to true makes the frame visible, and setting it to false hides the frame.
+        \item[5]\ setDefaultCloseOperation(): Defines what happens when the 
+             user closes the frame. 
+        \item[6]\ add(): Adds a component (e.g., JPanel, JButton, JLabel) to the frame.
+        \end{enumerate}
+     \item [\bullet] \textbf {Color} :The Color class in the Java Swing library is used to represent and manipulate colors in graphical user interfaces .Methods are as follows:
+        \begin{enumerate}
+          \item[1]\ setColor(): it sets of color of background or of any shape.
+          \end{enumerate}
+    \item [\bullet] \textbf{Font} :is used to specify the font family, style, and size for rendering text in graphical user interfaces. Methods are as follows.
+        \begin{enumerate}
+        \item[1]\ setFont() : to set the font of text.
+         \end{enumerate}
+      \item [\bullet] \textbf {Graphics} : The Graphics class in the Java AWT  library is used for drawing and rendering graphics on various graphical components and surfaces in a Java application.
+       \begin{enumerate}
+          \item[1]\ fillRect(): Fills a rectangle.
+          \item[2]\ fillOval() : Fills an oval.
+          \item[3]\ drawString() :Renders text at the specified position.
+          \item[4]\ dispose() : Releases any system resources used by the Graphics object when finished with it.
+          \item[5]\ paint(Graphics g) : You can use the Graphics object provided as a parameter to draw shapes, text, and images on the component.
+          \end{enumerate}
+     \item[\bullet] \textbf{Graphics2D} :Graphics2D extends the graphics class which focuses on geometry and color managment.
+     \item[\bullet] \textbf{Rectangle} : It is a fundamental class for defining and manipulating rectangles in graphical applications. 
+          \begin{enumerate}
+        \item[1]\ Rectangle(int x, int y, int width, int height): Creates a Rectangle object with the specified position (x, y) and dimensions (width and height).
+        \item[2]\ Rectangle.intersects : whether two rectangles will intersect or not.
+        \end{enumerate}
+      \item[\bullet]\textbf{Action Event }: The ActionEvent class in Java is part of the java.awt.event package.The ActionEvent class is primarily used to respond to user actions and invoke appropriate event handlers. 
+    \item[\bullet]\textbf{Action listener interfaces}:These interfaces provide a mechanism for responding to user actions.
+    \begin{enumerate}
+      \item[1]\ actionPerformed() : action performed method is called to perform an action.
+         \end{enumerate}
+         
+      \item[\bullet]\textbf{Key Event }:The KeyEvent's object  contains information about the event, such as the key character and modifier keys.
+        \item[1]\ getKeyCode() : Returns the integer keyCode associated with the key in this event.
+      \item[\bullet]\textbf{Key Listener Interfaces} : It is commonly used to capture and respond to key presses and key releases. 
+       \begin{enumerate}
+         \item[1]\ keyPressed(KeyEvent e):This method is called when a key is pressed down. It is triggered as soon as the key is pressed and held.
+     \item[\bullet]\textbf{Timer} : generate periodic events or actions.
+              \begin{enumerate}
+      \item[1]\ start() :Starts the Timer, causing it to start sending action events to its listeners.
+         \end{enumerate}
+     \item[\bullet]\textbf{JPanel} : JPanel provides a blank canvas, or a region within a GUI, where you can add other Swing components, draw custom graphics, or organize and group other components. 
+     \item[\bullet]\textbf{BasicStrokes}:  is used to define the basic characteristics of the strokes used for drawing lines and shapes.
+     \item[\bullet]\textbf{MapGenerator } :It generates the layout of bricks.
+     \item[\bullet]\textbf{MyGame }: IT is the main class of the game which implements the features of Jframe class and load all the classes.
+       
+    \end{enumerate}
+    \pagebreak{}
+\begin{center}
+    \LARGE \underline{\textbf{OUTPUT }}    
+\end{center}
+\begin{center}
+\includegraphics[width = 15cm]{Screenshot 2023-10-29 120631.png}
+\end{center}
+\pagebreak{}
+\begin{center}
+    \LARGE \underline{\textbf{DEBUGGING }}\\
+\end{center}
+ \textbf{Before Debugging:}\\
+   \begin{center}
+\includegraphics[width = 15cm]{Debug1.png}
+\end{center}
+\textbf{After Debugging:}\\
+\begin{center}
+\includegraphics[width = 15cm]{debug2.png}
+\end{center}
+\pagebreak{}
+\begin{center}
+    \LARGE \underline{\textbf{PROFILLING }}\\
+ \end{center}   
+ \LARGE{\textbf{VisualVm tool:} } : It is used as a profiller tool for java which is already installed in jdk.\\
+ \begin{center}
+\includegraphics[width = 15cm]{Screenshot 2023-10-28 232506.png}
+\end{center}
+\textbf{}\\
+\begin{center}
+\includegraphics[width = 15cm]{summary.png}
+\end{center}
+\textbf{}\\
+\begin{center}
+\includegraphics[width = 15cm]{windows.png}
+\end{center}
+    \end{document}
