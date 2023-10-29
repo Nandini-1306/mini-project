@@ -15,22 +15,18 @@ import java.awt.event.KeyListener;
 import javax.swing.Timer;
 import javax.swing.JPanel;
 import java.awt.BasicStroke;
-import java.awt.Color;
-import java.awt.Graphics2D;
 
 //class JPanel implements the inbuilt interfaces KeyListener and ActionListener from awt.event package
-//
 
  class play extends JPanel implements KeyListener , ActionListener 
 {
-
            private boolean play = false;
            private int score =0;
 
            private int totalBricks = 21;
 
            private Timer timer;  //Timer generates action at periodic interval which is used to trigger an event 
-           private int delay =9;
+           private int delay =9; //9 seconds 
 
            private int playerX = 310;
 
@@ -41,7 +37,7 @@ import java.awt.Graphics2D;
 
            private MapGenerator map;
 
-           public play()
+         public play()
            {
                map = new MapGenerator(3,7);
 
@@ -54,7 +50,7 @@ import java.awt.Graphics2D;
                timer.start();
            }
 
-           public void paint(Graphics g)
+     public void paint(Graphics g)
            {
             //Details of  background 
             g.setColor(Color.black);
@@ -165,6 +161,7 @@ import java.awt.Graphics2D;
 
             ballposX += ballXdir;
             ballposY += ballYdir;
+            
             if(ballposX <0)
             {
                 ballXdir = - ballXdir;
@@ -243,13 +240,9 @@ import java.awt.Graphics2D;
    }
     public void keyReleased(KeyEvent e)
     {
-        
-    }
-    
+        //implemented the abstract method of KeyListener class
+    } 
 }
-
-
-
 
 class MapGenerator
 {
@@ -295,9 +288,6 @@ class MapGenerator
     }
 
 }
-
-
-
 public class MyGame
 {
     public static void main(String args[])
